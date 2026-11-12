@@ -30,6 +30,18 @@ jobs:
         run: |
           mkdir -p site
           cp index.html site/index.html
+      - name: Try enabling GitHub Pages through GitHub CLI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          if gh api "repos/$GITHUB_REPOSITORY/pages" >/dev/null 2>&1; then
+            echo "PAGES_ALREADY_ENABLED=YES"
+          else
+            echo "PAGES_ENABLE_ATTEMPT=START"
+            gh api -X POST "repos/$GITHUB_REPOSITORY/pages" -f build_type=workflow
+            echo "PAGES_ENABLE_ATTEMPT=SUCCESS"
+          fi
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site
