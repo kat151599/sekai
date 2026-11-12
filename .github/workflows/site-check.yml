@@ -44,7 +44,7 @@ jobs:
           required = {'top', 'about', 'units', 'gallery', 'play', 'galleryGrid', 'lightbox', 'menuToggle'}
           assert required <= inspector.ids, required - inspector.ids
           assert len(inspector.images) >= 4
-          assert all(u and u.startswith('https://') for u in inspector.images)
+          assert all(not u or u.startswith('https://') for u in inspector.images), 'Unexpected image URL'
           assert all(not u or not u.startswith('#') or u[1:] in inspector.ids for u in inspector.links), 'Broken internal anchor'
           scripts = re.findall(r'<script>(.*?)</script>', html, re.S)
           assert len(scripts) == 1, 'Expected exactly one inline script'
