@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111329">
+  <meta name="description" content="Погрузись в SEKAI: ритм, персонажи, истории и виртуальные шоу HATSUNE MIKU: COLORFUL STAGE! Неофициальный фан-сайт.">
+  <meta property="og:title" content="SEKAI — найди свою музыку">
+  <meta property="og:description" content="Красочный фан-сайт по HATSUNE MIKU: COLORFUL STAGE!">
+  <meta property="og:type" content="website">
+  <title>SEKAI ✦ Найди свою музыку</title>
+  <link rel="preconnect" href="https://play-lh.googleusercontent.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#11142b;--sub:#69728b;--teal:#27d7cc;--pink:#ff75b0;--violet:#a58af8;
+      --paper:#f7faff;--line:#e7eaf4;--navy:#111329;--radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:94px}
+    body{margin:0;font:500 16px/1.65 Manrope,"DM Sans",system-ui,sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+    img{max-width:100%;display:block}
+    button,a{-webkit-tap-highlight-color:transparent}
+    button{font:inherit;cursor:pointer}
+    a{text-decoration:none;color:inherit}
+    :focus-visible{outline:3px solid #37cdc3;outline-offset:4px}
+    .container{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+    .eyebrow{font:800 11px/1.5 "DM Sans",sans-serif;letter-spacing:.22em;text-transform:uppercase}
+    .spark{color:var(--pink)}
+    .topline{background:#08b9af;color:#07172e;text-align:center;font:800 10px/1.5 "DM Sans",sans-serif;letter-spacing:.2em;padding:8px 12px}
+    .topline span{opacity:.5;margin-inline:13px}
+    .nav-wrap{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid #e7edf4}
+    .nav{height:74px;display:flex;align-items:center;gap:32px;justify-content:space-between}
+    .brand{display:inline-flex;align-items:center;gap:10px;font:800 22px/1 "DM Sans",sans-serif;letter-spacing:-.09em}
+    .brand em{font-style:normal;color:#19bfb9}
+    .brand-icon{width:31px;height:31px;position:relative;display:inline-block;transform:rotate(-18deg)}
+    .brand-icon:before,.brand-icon:after{content:"";position:absolute;inset:3px;border:5px solid #27d7cc;transform:skew(-9deg);border-radius:7px}
+    .brand-icon:after{inset:10px -2px -2px 10px;border-color:#ff78b3;opacity:.95}
+    .nav-links{display:flex;align-items:center;gap:28px;margin-left:auto}
+    .nav-links a{font:800 12px/1.2 "DM Sans",sans-serif;letter-spacing:.03em;color:#535a71;transition:color .2s}
+    .nav-links a:hover{color:#00a99e}
+    .nav-play,.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:12px;border:0;border-radius:99px;font:800 13px/1.2 "DM Sans",sans-serif;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+    .nav-play{padding:13px 20px;background:#15172f;color:white}
+    .nav-play:hover,.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 28px #1a1a3a28}
+    .menu-toggle{display:none;width:42px;height:42px;border-radius:14px;border:1px solid var(--line);background:#fff;font-size:21px}
+    .hero{position:relative;isolation:isolate;min-height:660px;overflow:hidden;background:radial-gradient(circle at 76% 34%,#394065 0%,#1b1d3d 35%,#10132a 74%);color:white}
+    .hero:before{position:absolute;inset:0;z-index:-1;content:"";background:linear-gradient(115deg,#0000 0 30%,#ffffff04 30% 30.2%,#0000 30.2% 60%,#ffffff07 60% 60.1%,#0000 60.1%);pointer-events:none}
+    .hero:after{content:"";position:absolute;width:480px;height:480px;right:-180px;top:-210px;border-radius:50%;background:#13cfc0;opacity:.14;filter:blur(35px);z-index:-1}
+    .hero-layout{display:grid;grid-template-columns:.94fr 1.06fr;gap:20px;align-items:center;min-height:660px;padding-block:74px 90px}
+    .hero-copy{position:relative;z-index:3}
+    .hero-kicker{display:inline-flex;gap:13px;align-items:center;color:#86ece7}
+    .hero-kicker:before{content:"";width:24px;height:2px;background:#5ee4dc}
+    .hero h1{font:800 clamp(56px,7.6vw,103px)/.99 "DM Sans",sans-serif;letter-spacing:-.09em;margin:24px 0 28px;max-width:620px}
+    .hero h1 .outlined{color:transparent;-webkit-text-stroke:1.5px #fff;display:block}
+    .hero h1 .gradient{display:block;width:fit-content;background:linear-gradient(90deg,#62eee7 3%,#99e4ff 42%,#ffadd3 88%);color:transparent;background-clip:text;-webkit-background-clip:text}
+    .hero-desc{font-size:15px;line-height:1.95;max-width:450px;color:#c4c8e1;margin:0}
+    .hero-desc strong{color:#fff}
+    .hero-actions{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:36px}
+    .btn-primary{background:var(--teal);color:#0d2332;padding:18px 27px;box-shadow:0 8px 26px #18e1d225}
+    .btn-ghost{border:1px solid #777d9c;background:#ffffff0b;color:white;border-radius:99px;padding:16px 23px;font:800 13px/1.2 "DM Sans",sans-serif;transition:background .2s}
+    .btn-ghost:hover{background:#ffffff20}
+    .hero-note{display:flex;align-items:center;gap:11px;color:#9ca7cb;margin-top:40px;font:700 11px/1.4 "DM Sans",sans-serif;letter-spacing:.04em}
+    .hero-note i{width:9px;height:9px;background:#55d4c9;box-shadow:0 0 0 5px #52e4d722;border-radius:50%}
+    .hero-art{height:510px;position:relative;isolation:isolate;transform:translateX(8px)}
+    .hero-art:before{content:"";position:absolute;inset:25px 8px 28px 30px;border-radius:50%;background:linear-gradient(130deg,#41eed876,#ff8bc762);filter:blur(55px);opacity:.68;z-index:-1}
+    .orbit{position:absolute;border:1px solid #c2f5ec2b;border-radius:50%;transform:rotate(-18deg)}
+    .orbit-one{width:580px;height:420px;left:-20px;top:50px}
+    .orbit-two{width:490px;height:520px;right:0;top:-10px}
+    .poster{position:absolute;width:90%;right:2%;top:14%;transform:rotate(-7deg);border:9px solid #e8efff;border-radius:22px;box-shadow:0 25px 80px #0009;overflow:hidden;background:#82cdec}
+    .poster img{width:100%;height:340px;object-fit:cover}
+    .small-poster{position:absolute;bottom:0;left:0;width:49%;transform:rotate(9deg);border:7px solid white;border-radius:18px;overflow:hidden;box-shadow:0 20px 55px #0009;background:#9de5ef}
+    .small-poster img{height:154px;width:100%;object-fit:cover}
+    .hero-sticker{position:absolute;right:0;bottom:1%;transform:rotate(-9deg);padding:15px 23px;border-radius:17px;background:#fff;color:#1c2541;box-shadow:0 13px 32px #0004;text-align:center}
+    .hero-sticker b{display:block;font:800 27px/1 "DM Sans",sans-serif;letter-spacing:-.05em}
+    .hero-sticker small{display:block;font:800 9px/1.4 "DM Sans",sans-serif;letter-spacing:.12em;margin-top:5px}
+    .hero-star{position:absolute;color:#fff;font-size:58px;line-height:1;top:11px;left:6px;text-shadow:0 0 30px #a5fff9;animation:float 5s ease-in-out infinite}
+    .hero-star.pink{color:#fc8dc5;font-size:31px;top:auto;bottom:64px;left:auto;right:20px;animation-delay:1s}
+    .ticker{background:#dffaf9;border-bottom:1px solid #b7eded;overflow:hidden}
+    .ticker-inner{display:flex;align-items:center;justify-content:center;gap:40px;min-height:62px;flex-wrap:wrap;padding:12px}
+    .ticker-item{font:800 11px/1.4 "DM Sans",sans-serif;letter-spacing:.1em;color:#148e91;white-space:nowrap}
+    .ticker-item span{color:#fb84b9;margin-right:10px;font-size:17px}
+    .section{padding:102px 0}
+    .section-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:45px}
+    .section-heading h2,.heading-xl{font:800 clamp(34px,4.4vw,58px)/1.12 "DM Sans",sans-serif;letter-spacing:-.065em;margin:14px 0 0}
+    .section-heading p{max-width:350px;font-size:14px;color:var(--sub);margin:0}
+    .pink-text{color:#f26daa}
+    .teal-text{color:#0fbab0}
+    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+    .feature-card{position:relative;background:white;border:1px solid var(--line);border-radius:25px;padding:34px;min-height:270px;box-shadow:0 10px 25px #1b2a4110;transition:transform .25s,box-shadow .25s}
+    .feature-card:hover{transform:translateY(-6px);box-shadow:0 22px 40px #1b2a4117}
+    .feature-card:before{content:"";position:absolute;width:65px;height:5px;left:33px;top:0;border-radius:0 0 10px 10px;background:var(--card-accent)}
+    .feature-symbol{display:grid;place-items:center;width:64px;height:64px;border-radius:19px;font-size:29px;background:var(--card-bg);margin-bottom:30px}
+    .feature-card h3{font:800 21px/1.25 "DM Sans",sans-serif;letter-spacing:-.04em;margin:0 0 12px}
+    .feature-card p{margin:0;font-size:13px;line-height:1.8;color:var(--sub)}
+    .about-band{background:#fff;overflow:hidden}
+    .about-layout{display:grid;grid-template-columns:1fr 1fr;gap:95px;align-items:center}
+    .about-mosaic{position:relative;height:455px}
+    .about-main{position:absolute;inset:18px 55px 38px 0;overflow:hidden;border-radius:30px;border:9px solid #e3f5fb;background:#e6efff;box-shadow:0 23px 60px #7190ba30;transform:rotate(-5deg)}
+    .about-main img{width:100%;height:100%;object-fit:cover}
+    .about-mini{position:absolute;right:0;bottom:0;width:52%;overflow:hidden;border:7px solid white;border-radius:22px;box-shadow:0 18px 35px #34406335;transform:rotate(8deg)}
+    .about-mini img{aspect-ratio:1.5;object-fit:cover}
+    .circle-label{position:absolute;top:-24px;right:2px;background:#ffa5d1;width:120px;height:120px;border-radius:50%;display:grid;place-items:center;transform:rotate(12deg);font:800 13px/1.3 "DM Sans",sans-serif;letter-spacing:.04em;text-align:center;box-shadow:0 12px 36px #ef70ac55}
+    .about-copy p{color:var(--sub);font-size:15px;line-height:1.95;margin:24px 0}
+    .about-copy strong{color:var(--ink)}
+    .about-list{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+    .about-list span{background:#e8f9f7;color:#058b89;border:1px solid #cbf0eb;padding:8px 14px;border-radius:30px;font-size:12px;font-weight:800}
+    .units-section{background:#12152e;color:white;position:relative;overflow:hidden}
+    .units-section:before{content:"";position:absolute;width:400px;height:400px;background:#ca6dbb33;filter:blur(100px);right:-150px;top:-100px}
+    .units-section .section-heading p{color:#b2bbda}
+    .unit-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+    .unit-tab{border:1px solid #515675;background:#ffffff0b;color:#b9c2dd;padding:12px 16px;border-radius:13px;font:800 12px/1.2 "DM Sans",sans-serif;transition:background .2s,transform .2s}
+    .unit-tab:hover{transform:translateY(-2px)}
+    .unit-tab.active{background:#fff;color:#18203a;border-color:#fff}
+    .unit-panel{display:grid;grid-template-columns:.86fr 1.14fr;min-height:386px;background:#1c2141;border:1px solid #3c4368;border-radius:30px;overflow:hidden}
+    .unit-copy{padding:52px;position:relative;z-index:1}
+    .unit-index{color:#9fb0d2;font:800 11px/1 "DM Sans",sans-serif;letter-spacing:.2em}
+    .unit-copy h3{font:800 clamp(29px,3.5vw,46px)/1.16 "DM Sans",sans-serif;letter-spacing:-.055em;margin:24px 0 14px}
+    .unit-copy p{color:#c6cbe2;max-width:390px;font-size:15px;line-height:1.9}
+    .mood-tag{display:inline-flex;gap:10px;align-items:center;background:#ffffff18;padding:10px 15px;border-radius:100px;font-size:12px;font-weight:800;margin-top:19px}
+    .mood-tag:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--unit-accent,#38d4c9)}
+    .unit-visual{position:relative;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,#35a7b4,#7d81d9)}
+    .unit-visual:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 15%,#ffffff9c,transparent 42%),radial-gradient(circle at 75% 80%,#fe7fc177,transparent 45%);opacity:.45}
+    .unit-visual:after{content:"♪";position:absolute;font:800 280px/1 "DM Sans",sans-serif;color:#ffffff17;right:0;bottom:-20px;transform:rotate(-22deg)}
+    .unit-visual img{width:83%;border:8px solid #fff;border-radius:16px;box-shadow:0 25px 75px #0d102e75;transform:rotate(5deg);z-index:1;transition:transform .4s}
+    .unit-panel:hover .unit-visual img{transform:rotate(1deg) scale(1.03)}
+    .gallery-section{background:#f6f8ff}
+    .gallery-toolbar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px}
+    .filter-btn{background:#fff;border:1px solid #dde4f3;color:#62708b;border-radius:99px;padding:10px 18px;font:800 12px/1.4 "DM Sans",sans-serif}
+    .filter-btn[aria-pressed="true"]{color:white;background:#1d203a;border-color:#1d203a}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .shot-card{display:block;width:100%;text-align:left;border:1px solid #e2e6f1;border-radius:21px;padding:9px;background:#fff;box-shadow:0 12px 24px #1b2a4110;overflow:hidden;transition:transform .25s,box-shadow .25s}
+    .shot-card:hover{transform:translateY(-6px);box-shadow:0 20px 42px #262d5530}
+    .shot-image{display:block;aspect-ratio:16/9;border-radius:13px;overflow:hidden;background:#dce7fb}
+    .shot-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .shot-card:hover .shot-image img{transform:scale(1.055)}
+    .shot-caption{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 11px 8px}
+    .shot-caption strong{font:800 13px/1.4 "DM Sans",sans-serif;color:#27304d}
+    .shot-caption small{font:700 10px/1.5 "DM Sans",sans-serif;color:#929cb3;text-transform:uppercase;letter-spacing:.08em}
+    .gallery-tip{margin-top:22px;font-size:12px;color:#929bb2}
+    .play-section{background:linear-gradient(125deg,#c8faf2 0%,#e8f7ff 47%,#ffe3f1 100%);position:relative;overflow:hidden}
+    .play-section:before{content:"✦";position:absolute;left:2%;top:3%;font-size:150px;color:#fff8}
+    .play-layout{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:65px}
+    .play-copy p{max-width:480px;color:#62738c;margin:20px 0}
+    .kbd-note{display:inline-block;margin-top:8px;background:#ffffffa6;border:1px solid #fff;padding:11px 16px;border-radius:14px;font-size:12px;color:#53637d}
+    kbd{display:inline-block;border:1px solid #d3d7e9;border-bottom-width:3px;background:white;padding:2px 7px;margin:0 2px;border-radius:6px;font:800 11px "DM Sans",sans-serif;color:#394864}
+    .rhythm-machine{background:#13172e;color:#fff;border-radius:28px;border:8px solid #fff;box-shadow:0 25px 70px #334a8360;padding:28px;transform:rotate(2deg)}
+    .machine-head{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #363a55;padding-bottom:19px}
+    .machine-title{font:800 13px/1 "DM Sans",sans-serif;letter-spacing:.1em}
+    .machine-score{color:#63e7db;font:800 14px "DM Sans",sans-serif}
+    .beat-screen{position:relative;height:124px;display:grid;place-items:center;overflow:hidden}
+    .beat-screen:before,.beat-screen:after{content:"";position:absolute;width:370px;height:370px;border:1px solid #43507b;border-radius:50%;opacity:.8}
+    .beat-screen:after{width:250px;height:250px}
+    .beat-feedback{position:relative;z-index:1;font:800 42px/1 "DM Sans",sans-serif;letter-spacing:-.05em;color:#7ceade;text-shadow:0 0 26px #46ddd46b}
+    .beat-feedback.pop{animation:hit .25s ease}
+    .beat-pads{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .beat-pad{border:1px solid #ffffff38;min-height:106px;border-radius:17px;color:#11152f;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;font:800 12px "DM Sans",sans-serif;transition:transform .08s,filter .08s}
+    .beat-pad b{font-size:22px}
+    .beat-pad:active,.beat-pad.hit{transform:translateY(5px) scale(.96);filter:brightness(1.25);box-shadow:0 0 26px #fff8}
+    .beat-pad:nth-child(1){background:#5be4d9}.beat-pad:nth-child(2){background:#f8a3cc}
+    .beat-pad:nth-child(3){background:#a6b9ff}.beat-pad:nth-child(4){background:#ffe184}
+    .machine-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px;font:700 10px "DM Sans",sans-serif;letter-spacing:.12em;color:#b4bddb}
+    .reset-score{border:0;background:transparent;color:#b5c0e1;font:700 10px "DM Sans",sans-serif;text-decoration:underline}
+    .download-section{padding:80px 0;background:#fff}
+    .download-banner{position:relative;overflow:hidden;background:#171a36;color:#fff;border-radius:34px;padding:58px 65px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+    .download-banner:before{content:"";position:absolute;width:400px;height:350px;right:0;top:-160px;background:radial-gradient(circle,#42e3d86b,transparent 70%);pointer-events:none}
+    .download-banner h2{font:800 clamp(30px,4vw,51px)/1.12 "DM Sans",sans-serif;letter-spacing:-.06em;margin:10px 0}
+    .download-banner p{font-size:14px;color:#b3bcdb;margin:10px 0 0}
+    .download-banner .btn-primary{flex-shrink:0;z-index:1}
+    .footer{background:#111329;color:#a1a9c5;padding:45px 0}
+    .footer-row{display:flex;align-items:start;justify-content:space-between;gap:30px}
+    .footer .brand{color:white;margin-bottom:16px}
+    .footer small{display:block;max-width:680px;font-size:11px;line-height:1.9}
+    .footer-links{display:flex;flex-wrap:wrap;gap:20px;font:700 11px "DM Sans",sans-serif;white-space:nowrap}
+    .footer-links a:hover{color:#6ee7df}
+    .lightbox{padding:0;border:0;border-radius:23px;width:min(1040px,calc(100% - 24px));max-height:90vh;background:#12152d;color:white;box-shadow:0 30px 110px #000b;overflow:hidden}
+    .lightbox::backdrop{background:#070a20df;backdrop-filter:blur(8px)}
+    .lightbox-inner{padding:19px}
+    .lightbox-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:1px 5px 15px}
+    .lightbox-top strong{font:800 14px "DM Sans",sans-serif}
+    .lightbox-close,.lightbox-arrow{border:1px solid #ffffff45;background:#ffffff20;color:white;border-radius:50%;display:grid;place-items:center}
+    .lightbox-close{width:38px;height:38px;font-size:25px;line-height:1}
+    .lightbox-image-wrap{position:relative;background:#222a4c;border-radius:12px;overflow:hidden}
+    .lightbox-image-wrap img{width:100%;max-height:min(70vh,680px);object-fit:contain}
+    .lightbox-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;font-size:29px;z-index:2}
+    .lightbox-arrow.prev{left:13px}.lightbox-arrow.next{right:13px}
+    .lightbox-bottom{display:flex;justify-content:space-between;padding:14px 5px 1px;color:#aab6d4;font:700 11px "DM Sans",sans-serif}
+    @keyframes float{50%{transform:translateY(-13px) rotate(9deg)}}
+    @keyframes hit{0%{transform:scale(.8)}55%{transform:scale(1.14)}100%{transform:scale(1)}}
+    @media (max-width:960px){
+      .nav{gap:15px}.nav-links{gap:14px}.hero h1{font-size:68px}
+      .hero-layout{grid-template-columns:1fr 1fr}.hero-art{height:425px}.poster img{height:290px}
+      .about-layout{gap:40px}.unit-copy{padding:36px}.play-layout{gap:30px}
+    }
+    @media (max-width:760px){
+      .container{width:min(100% - 36px,540px)}
+      .nav{height:64px}.menu-toggle{display:block;margin-left:auto}
+      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;padding:12px 22px 20px;box-shadow:0 20px 30px #0e153025}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:13px 3px;border-bottom:1px solid #eff1f6}
+      .nav-play{padding:11px 15px;font-size:11px}
+      .hero-layout{display:flex;flex-direction:column;padding-block:65px 45px;align-items:stretch;gap:35px}
+      .hero{min-height:auto}.hero h1{font-size:clamp(59px,14vw,84px);margin:18px 0 22px}
+      .hero-desc{font-size:14px}.hero-note{margin-top:28px}
+      .hero-art{height:390px;transform:none}
+      .poster{width:83%;right:5%;top:8%}.poster img{height:260px}
+      .small-poster{width:49%;bottom:0}.small-poster img{height:140px}
+      .ticker-inner{gap:8px 18px}.ticker-item{font-size:9px}
+      .section{padding:75px 0}.section-heading{display:block;margin-bottom:28px}.section-heading p{margin-top:18px}
+      .features-grid,.gallery-grid{grid-template-columns:1fr 1fr}
+      .feature-card{padding:25px;min-height:250px}
+      .about-layout{display:flex;flex-direction:column-reverse;gap:30px}
+      .about-mosaic{width:100%;height:370px}.about-main{inset:20px 40px 30px 0}
+      .units-section .section-heading{margin-bottom:31px}
+      .unit-tabs{display:grid;grid-template-columns:1fr 1fr}.unit-tab{padding:12px 8px;font-size:11px}
+      .unit-panel{display:flex;flex-direction:column}.unit-copy{padding:30px}.unit-visual{height:265px}
+      .unit-visual img{width:78%}
+      .play-layout{display:flex;flex-direction:column;align-items:stretch;gap:28px}
+      .rhythm-machine{transform:none}
+      .download-banner{display:block;padding:38px 30px}.download-banner .btn-primary{margin-top:26px}
+      .footer-row{display:block}.footer-links{margin-top:22px}
+    }
+    @media(max-width:490px){
+      .topline{font-size:9px;letter-spacing:.1em}.topline span{margin-inline:6px}
+      .brand{font-size:20px}.nav{gap:8px}.nav-play{padding:11px 12px;font-size:10px}
+      .hero h1{font-size:clamp(51px,12vw,64px)}
+      .hero-actions{gap:10px}.btn-primary,.btn-ghost{padding:15px 18px;font-size:12px}
+      .hero-art{height:295px}
+      .poster{border-width:6px;border-radius:15px}.poster img{height:208px}
+      .small-poster{border-width:5px}.small-poster img{height:100px}
+      .hero-sticker{padding:10px 12px;border-radius:12px}.hero-sticker b{font-size:17px}.hero-sticker small{font-size:7px}
+      .orbit-one{width:360px;height:250px}.orbit-two{width:280px;height:300px}
+      .features-grid,.gallery-grid{grid-template-columns:1fr}
+      .feature-card{min-height:0}.feature-symbol{margin-bottom:20px}
+      .about-mosaic{height:300px}.circle-label{width:86px;height:86px;font-size:10px;right:0}
+      .unit-tabs{grid-template-columns:1fr 1fr}
+      .unit-visual{height:220px}.unit-copy h3{font-size:32px}
+      .beat-pads{gap:6px}.beat-pad{min-height:86px;border-radius:11px}.beat-pad b{font-size:18px}
+      .rhythm-machine{padding:15px;border-width:5px}
+      .beat-feedback{font-size:30px}.download-banner{border-radius:23px}
+    }
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topline">SEKAI FAN SPACE <span>✦</span> UNOFFICIAL PROJECT <span>✦</span> FIND YOUR MUSIC</div>
+  <div class="nav-wrap">
+    <nav class="nav container" aria-label="Главная навигация">
+      <a class="brand" href="#top" aria-label="SEKAI, наверх"><span class="brand-icon" aria-hidden="true"></span>SEK<em>AI.</em></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">О мире</a><a href="#units">Юниты</a><a href="#gallery">Галерея</a><a href="#play">Мини-игра</a>
+      </div>
+      <a class="nav-play" href="https://play.google.com/store/apps/details?id=com.sega.ColorfulStage.en" target="_blank" rel="noopener noreferrer">Скачать игру ↗</a>
+    </nav>
+  </div>
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <span class="eyebrow hero-kicker">HATSUNE MIKU: COLORFUL STAGE!</span>
+          <h1 id="heroTitle">НАЙДИ <span class="outlined">СВОЮ</span><span class="gradient">МУЗЫКУ.</span></h1>
+          <p class="hero-desc">У каждого чувства есть своя мелодия. Встречай <strong>Хацунэ Мику</strong>, собирай команду и открой собственный мир <strong>SEKAI</strong> — там, где музыка говорит за тебя.</p>
+          <div class="hero-actions"><a class="btn-primary" href="#about">Открыть SEKAI <span aria-hidden="true">↗</span></a><a class="btn-ghost" href="#gallery">Смотреть скриншоты ▷</a></div>
+          <div class="hero-note"><i aria-hidden="true"></i> НЕОФИЦИАЛЬНЫЙ ФАН-САЙТ · С ЛЮБОВЬЮ К МУЗЫКЕ</div>
+        </div>
+        <div class="hero-art" aria-label="Скриншоты HATSUNE MIKU COLORFUL STAGE!">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <span class="hero-star" aria-hidden="true">✦</span><span class="hero-star pink" aria-hidden="true">✦</span>
+          <div class="poster"><img fetchpriority="high" alt="Персонажи игры HATSUNE MIKU COLORFUL STAGE на ярком фоне" src="https://play-lh.googleusercontent.com/mywC_XNJizzNAUQXLcq0g71UK0PAr1DlUb5r_zas8KaisEahMe6MEf_4g7eJmRUXE-4ft5nSM6jCfn040p7JFIw=w1280-h720"></div>
+          <div class="small-poster"><img alt="Ритм-игра с нотами и яркими эффектами" src="https://play-lh.googleusercontent.com/K918_AvL0bhtyd54kEbn_-5gaDq1D5fsvwQeADoXldXu0KzZcD-H-ql63MbLedajsxUeeI_SsRLMcF9Kvyd0llo=w1280-h720"></div>
+          <div class="hero-sticker" aria-hidden="true"><b>♪ FEEL THE BEAT</b><small>YOUR WORLD, YOUR SONG</small></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Темы игры"><div class="ticker-inner">
+      <div class="ticker-item"><span>✦</span> MUSIC</div><div class="ticker-item"><span>✦</span> FRIENDSHIP</div>
+      <div class="ticker-item"><span>✦</span> SEKAI</div><div class="ticker-item"><span>✦</span> STORIES</div>
+      <div class="ticker-item"><span>✦</span> YOUR FEELINGS</div>
+    </div></div>
+
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow teal-text">01 / ЧТО ТЕБЯ ЖДЁТ</div><h2 id="aboutTitle">БОЛЬШЕ, ЧЕМ <span class="pink-text">РИТМ-ИГРА.</span></h2></div>
+          <p>Мир, где можно оторваться под любимые треки, познакомиться с героями и найти свою историю.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card" style="--card-accent:#54dcd3;--card-bg:#d9faf6"><div class="feature-symbol" aria-hidden="true">♫</div><h3>Поймай ритм</h3><p>Нажимай, удерживай и делай свайпы в такт. Выбирай уровень сложности и собирай комбо.</p></article>
+          <article class="feature-card" style="--card-accent:#ffa3ca;--card-bg:#ffe3ef"><div class="feature-symbol" aria-hidden="true">✦</div><h3>Проживи историю</h3><p>Узнай героев пяти музыкальных юнитов. Их мечты, страхи и дружба звучат по-разному.</p></article>
+          <article class="feature-card" style="--card-accent:#a5a4ff;--card-bg:#e9e6ff"><div class="feature-symbol" aria-hidden="true">☆</div><h3>Выходи на сцену</h3><p>Собирай персонажей, меняй костюмы и присоединяйся к виртуальным концертам.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-band" aria-labelledby="sekaiTitle">
+      <div class="container about-layout">
+        <div class="about-mosaic">
+          <div class="about-main"><img loading="lazy" src="https://play-lh.googleusercontent.com/VwRBS1FSmcWAoyXBGj0ur-3xAAmX-8_OlCYZU4ZbOGnM11Hdo9sN7lHCrcr-8j04Q8SGK75O1uGDJudKlpLjOQ=w1280-h720" alt="Хацунэ Мику и героиня истории игры"></div>
+          <div class="about-mini"><img loading="lazy" src="https://play-lh.googleusercontent.com/mVCwZtNOBRxkRdwDRzMpss5P3YTMDO7Sa7M0Q6kL4xGMp4pmoEIUVNGjp8tZ0XecJp5n3pLNbdAXJ0HShGvqKQ=w1280-h720" alt="Виртуальный концерт в игре"></div>
+          <div class="circle-label" aria-hidden="true">MAKE<br>YOUR<br>OWN STORY ✦</div>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow teal-text">02 / ДОБРО ПОЖАЛОВАТЬ В SEKAI</div>
+          <h2 id="sekaiTitle" class="heading-xl">У ЧУВСТВ ЕСТЬ <span class="pink-text">СВОЙ МИР.</span></h2>
+          <p>В Сибуе появляется таинственная песня <strong>«Untitled»</strong>. Она ведёт людей в SEKAI — необычные миры, рождающиеся из их настоящих чувств.</p>
+          <p>Здесь Хацунэ Мику и другие виртуальные певцы помогают героям услышать себя. Не обязательно знать все песни наизусть. Главное — найти ту, которая откликается именно тебе.</p>
+          <div class="about-list"><span>20 оригинальных героев</span><span>5 музыкальных юнитов</span><span>6 уровней сложности</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section units-section" id="units" aria-labelledby="unitsTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow" style="color:#7ce8df">03 / НАЙДИ СВОЮ КОМАНДУ</div><h2 id="unitsTitle">ПЯТЬ ГРУПП.<br><span style="color:#84e7df">ПЯТЬ ИСТОРИЙ.</span></h2></div>
+          <p>Разные характеры, разные жанры, разные чувства. Выбери юнит и узнай, чем он живёт.</p>
+        </div>
+        <div class="unit-tabs" role="group" aria-label="Выбор музыкального юнита">
+          <button class="unit-tab active" type="button" data-unit="0" aria-pressed="true">Leo/need</button>
+          <button class="unit-tab" type="button" data-unit="1" aria-pressed="false">MORE MORE JUMP!</button>
+          <button class="unit-tab" type="button" data-unit="2" aria-pressed="false">Vivid BAD SQUAD</button>
+          <button class="unit-tab" type="button" data-unit="3" aria-pressed="false">Wonderlands×Showtime</button>
+          <button class="unit-tab" type="button" data-unit="4" aria-pressed="false">Nightcord at 25:00</button>
+        </div>
+        <div class="unit-panel" aria-live="polite">
+          <div class="unit-copy">
+            <div class="unit-index" id="unitNumber">UNIT 01 / 05</div>
+            <h3 id="unitName">Leo/need</h3>
+            <p id="unitDescription">Четыре подруги детства снова находят путь друг к другу через музыку. Гитарные мелодии, школьные будни и обещания, которые хочется сдержать.</p>
+            <span class="mood-tag" id="unitMood" style="--unit-accent:#89baff">Настроение: искренний рок</span>
+          </div>
+          <div class="unit-visual" id="unitVisual"><img loading="lazy" src="https://play-lh.googleusercontent.com/-y8uNgcJqpotHabjrQP5b0T1iE6bRcZBa6e3LFWFbzVx9S-lEp4kt9gsiJzGRucD_XiwjcscHIA05PXveVTUOVM=w1280-h720" alt="Скриншот со всеми музыкальными юнитами игры"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery" aria-labelledby="galleryTitle">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow teal-text">04 / ВЗГЛЯНИ ПОБЛИЖЕ</div><h2 id="galleryTitle">ЦВЕТНОЙ <span class="pink-text">МИР SEKAI.</span></h2></div>
+          <p>Настоящие скриншоты со страницы игры в Google Play. Нажми на любой, чтобы рассмотреть детали.</p>
+        </div>
+        <div class="gallery-toolbar" role="group" aria-label="Фильтр галереи">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Все кадры</button>
+          <button class="filter-btn" type="button" data-filter="rhythm" aria-pressed="false">Ритм и сцена</button>
+          <button class="filter-btn" type="button" data-filter="characters" aria-pressed="false">Персонажи</button>
+          <button class="filter-btn" type="button" data-filter="world" aria-pressed="false">Мир SEKAI</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+        <p class="gallery-tip">✦ Изображения: официальная страница HATSUNE MIKU: COLORFUL STAGE! в Google Play. Внешняя загрузка требует доступа к серверам Google.</p>
+      </div>
+    </section>
+
+    <section class="section play-section" id="play" aria-labelledby="playTitle">
+      <div class="container play-layout">
+        <div class="play-copy">
+          <div class="eyebrow teal-text">05 / НЕБОЛЬШОЙ ИНТЕРАКТИВ</div>
+          <h2 id="playTitle" class="heading-xl">А ТЫ <span class="pink-text">ЧУВСТВУЕШЬ</span> РИТМ?</h2>
+          <p>Сыграй свою маленькую мелодию. Нажимай на цветные пэды и экспериментируй со звуком. Это игрушка для сайта, а не копия механики оригинальной игры.</p>
+          <span class="kbd-note">На клавиатуре: <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd> · На телефоне — касайся пэдов</span>
+        </div>
+        <div class="rhythm-machine" aria-label="Интерактивные музыкальные клавиши">
+          <div class="machine-head"><span class="machine-title">SEKAI / MINI BEAT</span><span class="machine-score" id="scoreLabel">HITS: 000</span></div>
+          <div class="beat-screen"><span class="beat-feedback" id="beatFeedback" aria-live="polite">READY ♪</span></div>
+          <div class="beat-pads">
+            <button class="beat-pad" type="button" data-pad="0" aria-label="Нота До, клавиша A"><b>DO</b><span>A</span></button>
+            <button class="beat-pad" type="button" data-pad="1" aria-label="Нота Ре, клавиша S"><b>RE</b><span>S</span></button>
+            <button class="beat-pad" type="button" data-pad="2" aria-label="Нота Ми, клавиша D"><b>MI</b><span>D</span></button>
+            <button class="beat-pad" type="button" data-pad="3" aria-label="Нота Соль, клавиша F"><b>SOL</b><span>F</span></button>
+          </div>
+          <div class="machine-foot"><span>♪ CREATE YOUR MELODY</span><button class="reset-score" type="button" id="resetScore">СБРОСИТЬ СЧЁТ</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section" aria-labelledby="downloadTitle">
+      <div class="container"><div class="download-banner">
+        <div><div class="eyebrow" style="color:#81e6de">И ТВОЯ ПЕСНЯ НАЧИНАЕТСЯ ЗДЕСЬ</div><h2 id="downloadTitle">ГОТОВА ВОЙТИ В SEKAI? ✦</h2><p>HATSUNE MIKU: COLORFUL STAGE! · Официальная страница загрузки</p></div>
+        <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.sega.ColorfulStage.en" target="_blank" rel="noopener noreferrer">Открыть Google Play ↗</a>
+      </div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-row">
+    <div><a href="#top" class="brand"><span class="brand-icon" aria-hidden="true"></span>SEK<em>AI.</em></a>
+      <small>Неофициальный некоммерческий фан-проект, не связанный с SEGA, Colorful Palette или Crypton Future Media. Персонажи, игра, изображения и товарные знаки принадлежат соответствующим правообладателям. Скриншоты загружаются с Google Play.</small>
+    </div>
+    <div class="footer-links"><a href="https://colorfulstage.com/" target="_blank" rel="noopener noreferrer">Официальный сайт ↗</a><a href="https://play.google.com/store/apps/details?id=com.sega.ColorfulStage.en" target="_blank" rel="noopener noreferrer">Google Play ↗</a><a href="#top">Наверх ↑</a></div>
+  </div></footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр скриншота">
+    <div class="lightbox-inner">
+      <div class="lightbox-top"><strong id="lightboxTitle">Скриншот</strong><button class="lightbox-close" type="button" id="lightboxClose" aria-label="Закрыть">×</button></div>
+      <div class="lightbox-image-wrap">
+        <button class="lightbox-arrow prev" id="lightboxPrev" type="button" aria-label="Предыдущий кадр">‹</button>
+        <img id="lightboxImage" alt="Скриншот игры в увеличенном размере">
+        <button class="lightbox-arrow next" id="lightboxNext" type="button" aria-label="Следующий кадр">›</button>
+      </div>
+      <div class="lightbox-bottom"><span>ИЗОБРАЖЕНИЯ: GOOGLE PLAY / SEGA</span><span id="lightboxCount">1 / 8</span></div>
+    </div>
+  </dialog>
+
+  <script>
+    (function(){
+      "use strict";
+      var menuToggle=document.getElementById("menuToggle");
+      var navLinks=document.getElementById("navLinks");
+      menuToggle.addEventListener("click",function(){
+        var opened=navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded",String(opened));
+        menuToggle.textContent=opened?"×":"☰";
+      });
+      navLinks.querySelectorAll("a").forEach(function(link){
+        link.addEventListener("click",function(){
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded","false");
+          menuToggle.textContent="☰";
+        });
+      });
+
+      var unitData=[
+        {name:"Leo/need",description:"Четыре подруги детства снова находят путь друг к другу через музыку. Гитарные мелодии, школьные будни и обещания, которые хочется сдержать.",mood:"Искренний рок",color:"#89baff",gradient:"linear-gradient(125deg,#4d87cc,#9bc5fb)"},
+        {name:"MORE MORE JUMP!",description:"Мечта о сцене способна вернуть надежду. Четыре девушки создают собственный идол-юнит и дарят слушателям улыбки — даже когда самим непросто.",mood:"Сияющий идол-поп",color:"#a4ec8d",gradient:"linear-gradient(125deg,#5bbf9a,#b8eec6)"},
+        {name:"Vivid BAD SQUAD",description:"Уличные выступления, мощный бит и одна большая цель: превзойти легендарное музыкальное событие. Здесь энергия встречается с амбициями.",mood:"Уличный драйв",color:"#ff9b74",gradient:"linear-gradient(125deg,#ee7753,#ffb182)"},
+        {name:"Wonderlands×Showtime",description:"Четыре ярких артиста мечтают делать людей счастливыми. Их шоу — это фейерверк фантазии, безумных идей и совершенно искренней радости.",mood:"Театральное волшебство",color:"#ffc766",gradient:"linear-gradient(125deg,#d78cae,#ffd273)"},
+        {name:"Nightcord at 25:00",description:"Ночной музыкальный круг, в котором можно сказать вслух то, что не получается днём. Тонкая, эмоциональная история о поиске себя.",mood:"Полуночная лирика",color:"#b8acff",gradient:"linear-gradient(125deg,#545080,#9f91d8)"}
+      ];
+      var unitVisual=document.getElementById("unitVisual");
+      document.querySelectorAll(".unit-tab").forEach(function(tab){
+        tab.addEventListener("click",function(){
+          var index=Number(tab.dataset.unit),item=unitData[index];
+          document.querySelectorAll(".unit-tab").forEach(function(t){
+            var active=t===tab;t.classList.toggle("active",active);t.setAttribute("aria-pressed",String(active));
+          });
+          document.getElementById("unitNumber").textContent="UNIT "+String(index+1).padStart(2,"0")+" / 05";
+          document.getElementById("unitName").textContent=item.name;
+          document.getElementById("unitDescription").textContent=item.description;
+          var mood=document.getElementById("unitMood");
+          mood.textContent="Настроение: "+item.mood;
+          mood.style.setProperty("--unit-accent",item.color);
+          unitVisual.style.background=item.gradient;
+        });
+      });
+
+      var root="https://play-lh.googleusercontent.com/";
+      var shots=[
+        {title:"Музыка объединяет",category:"characters",label:"Персонажи",path:"mywC_XNJizzNAUQXLcq0g71UK0PAr1DlUb5r_zas8KaisEahMe6MEf_4g7eJmRUXE-4ft5nSM6jCfn040p7JFIw"},
+        {title:"Лови каждую ноту",category:"rhythm",label:"Ритм",path:"K918_AvL0bhtyd54kEbn_-5gaDq1D5fsvwQeADoXldXu0KzZcD-H-ql63MbLedajsxUeeI_SsRLMcF9Kvyd0llo"},
+        {title:"Выбери свой юнит",category:"characters",label:"Персонажи",path:"-y8uNgcJqpotHabjrQP5b0T1iE6bRcZBa6e3LFWFbzVx9S-lEp4kt9gsiJzGRucD_XiwjcscHIA05PXveVTUOVM"},
+        {title:"Создавай свой образ",category:"characters",label:"Персонажи",path:"lJ2I0-u9w8nbe9-vRxjrUFEevBJULJgnA_WFXP7zfsibyGWYLqQZYD6D0FbnHWBYZWAQViGdhXkjFIax9Ud1kg"},
+        {title:"Виртуальные концерты",category:"rhythm",label:"Ритм и сцена",path:"mVCwZtNOBRxkRdwDRzMpss5P3YTMDO7Sa7M0Q6kL4xGMp4pmoEIUVNGjp8tZ0XecJp5n3pLNbdAXJ0HShGvqKQ"},
+        {title:"Истории с Хацунэ Мику",category:"world",label:"Мир SEKAI",path:"VwRBS1FSmcWAoyXBGj0ur-3xAAmX-8_OlCYZU4ZbOGnM11Hdo9sN7lHCrcr-8j04Q8SGK75O1uGDJudKlpLjOQ"},
+        {title:"Развивай персонажей",category:"characters",label:"Персонажи",path:"757zMDO_aeCJUNiEqEkrOBWK00qXh0gk48_XYF3ahCzvSIxFnK-nIMvSMOKkBG-OvjdYMbjYXsmcuRanvLnevw"},
+        {title:"Создай свой уголок",category:"world",label:"Мир SEKAI",path:"yla_z4DxZehxUNbHlPO2zK7zLIzY8WaRuJ44S1yc0gS5hyZtSsg-c4D2_071Gw99UR0iBCoIpkFKE1aoN1e5cg"}
+      ];
+      shots.forEach(function(shot){shot.src=root+shot.path+"=w1280-h720";});
+      var activeShots=shots.slice(),gallery=document.getElementById("galleryGrid");
+      var lightbox=document.getElementById("lightbox"),lightboxImage=document.getElementById("lightboxImage");
+      var currentShot=0;
+      function renderGallery(filter){
+        activeShots=filter==="all"?shots.slice():shots.filter(function(s){return s.category===filter;});
+        gallery.replaceChildren();
+        activeShots.forEach(function(shot,i){
+          var card=document.createElement("button");card.type="button";card.className="shot-card";
+          card.setAttribute("aria-label","Увеличить: "+shot.title);
+          var frame=document.createElement("span");frame.className="shot-image";
+          var image=document.createElement("img");image.src=shot.src;image.alt=shot.title+" — скриншот из игры";image.loading="lazy";
+          frame.appendChild(image);
+          var caption=document.createElement("span");caption.className="shot-caption";
+          var title=document.createElement("strong");title.textContent=shot.title;
+          var label=document.createElement("small");label.textContent=shot.label+" ↗";
+          caption.appendChild(title);caption.appendChild(label);
+          card.appendChild(frame);card.appendChild(caption);
+          card.addEventListener("click",function(){openShot(i);});
+          gallery.appendChild(card);
+        });
+      }
+      document.querySelectorAll(".filter-btn").forEach(function(button){
+        button.addEventListener("click",function(){
+          document.querySelectorAll(".filter-btn").forEach(function(b){b.setAttribute("aria-pressed",String(b===button));});
+          renderGallery(button.dataset.filter);
+        });
+      });
+      function showShot(i){
+        currentShot=(i+activeShots.length)%activeShots.length;
+        var shot=activeShots[currentShot];
+        lightboxImage.src=shot.src;
+        lightboxImage.alt=shot.title+" — увеличенный скриншот";
+        document.getElementById("lightboxTitle").textContent=shot.title;
+        document.getElementById("lightboxCount").textContent=(currentShot+1)+" / "+activeShots.length;
+      }
+      function openShot(i){showShot(i);if(typeof lightbox.showModal==="function"){lightbox.showModal();}else{lightbox.setAttribute("open","");}}
+      function closeShot(){if(typeof lightbox.close==="function"){lightbox.close();}else{lightbox.removeAttribute("open");}}
+      document.getElementById("lightboxClose").addEventListener("click",closeShot);
+      document.getElementById("lightboxPrev").addEventListener("click",function(){showShot(currentShot-1);});
+      document.getElementById("lightboxNext").addEventListener("click",function(){showShot(currentShot+1);});
+      lightbox.addEventListener("click",function(e){if(e.target===lightbox){closeShot();}});
+      document.addEventListener("keydown",function(e){
+        if(!lightbox.open){return;}
+        if(e.key==="ArrowLeft"){e.preventDefault();showShot(currentShot-1);}
+        if(e.key==="ArrowRight"){e.preventDefault();showShot(currentShot+1);}
+      });
+      renderGallery("all");
+
+      var soundContext=null,notes=[261.63,293.66,329.63,392.00];
+      var totalHits=0,feedback=document.getElementById("beatFeedback");
+      function playTone(frequency){
+        try{
+          var AudioContextClass=window.AudioContext||window.webkitAudioContext;
+          if(!AudioContextClass){return;}
+          if(!soundContext){soundContext=new AudioContextClass();}
+          if(soundContext.state==="suspended"){soundContext.resume();}
+          var osc=soundContext.createOscillator(),gain=soundContext.createGain(),now=soundContext.currentTime;
+          osc.type="sine";osc.frequency.value=frequency;
+          gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.15,now+.012);
+          gain.gain.exponentialRampToValueAtTime(.0001,now+.24);
+          osc.connect(gain);gain.connect(soundContext.destination);
+          osc.start(now);osc.stop(now+.25);
+        }catch(_e){/* Visual interaction remains usable without audio. */}
+      }
+      function hitPad(index){
+        var pad=document.querySelector('.beat-pad[data-pad="'+index+'"]');
+        if(!pad){return;}
+        totalHits++;
+        document.getElementById("scoreLabel").textContent="HITS: "+String(totalHits).padStart(3,"0");
+        feedback.textContent=["DO ♪","RE ♪","MI ♪","SOL ♪"][index];
+        feedback.classList.remove("pop");void feedback.offsetWidth;feedback.classList.add("pop");
+        pad.classList.remove("hit");void pad.offsetWidth;pad.classList.add("hit");
+        setTimeout(function(){pad.classList.remove("hit");},125);
+        playTone(notes[index]);
+      }
+      document.querySelectorAll(".beat-pad").forEach(function(pad){
+        pad.addEventListener("click",function(){hitPad(Number(pad.dataset.pad));});
+      });
+      document.addEventListener("keydown",function(e){
+        if(lightbox.open||e.repeat||e.altKey||e.ctrlKey||e.metaKey){return;}
+        if(["INPUT","TEXTAREA","SELECT"].indexOf(document.activeElement.tagName)!==-1){return;}
+        var index=["a","s","d","f"].indexOf(e.key.toLowerCase());
+        if(index>=0){e.preventDefault();hitPad(index);}
+      });
+      document.getElementById("resetScore").addEventListener("click",function(){
+        totalHits=0;document.getElementById("scoreLabel").textContent="HITS: 000";feedback.textContent="READY ♪";
+      });
+    })();
+  </script>
+</body>
+</html>
