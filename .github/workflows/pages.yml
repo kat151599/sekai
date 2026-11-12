@@ -51,3 +51,13 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify published HTML from GitHub-hosted terminal
+        env:
+          PUBLIC_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -eu
+          echo "PUBLIC_URL=$PUBLIC_URL"
+          curl --fail --show-error --silent --location --retry 8 --retry-all-errors --retry-delay 5 --max-time 25 "$PUBLIC_URL" --output /tmp/sekai-live.html
+          grep -Fq '<title>SEKAI' /tmp/sekai-live.html
+          grep -Fq 'id="galleryGrid"' /tmp/sekai-live.html
+          echo "PUBLIC_SITE_HTTP_AND_CONTENT=PASS"
